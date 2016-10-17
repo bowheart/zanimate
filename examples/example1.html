@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Zanimate Example 1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="../src/zanimate.js"></script>
+		<style>
+			section {
+				min-height: 400px;
+			}
+
+			span {
+				background: #37e;
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+			}
+		</style>
+		<script>
+			$(function() {
+				$('.test').css('transition', 'margin-left 8s')
+					.css('marginLeft', '1400px')
+				setTimeout(function() {
+					$('.test').css('transition', 'margin-left 2s, margin-top 2s')
+						.css('marginLeft', '400px')
+				}, 3000)
+			})
+		</script>
+	</head>
+	<body>
+		<section class="section1">
+			<span data-anchor=".section1" data-zan="slidein-left-400px-.4s"></span>
+			<span data-anchor=".section1" data-zan="slidein-left-400px-.4s-.3s"></span>
+			<span data-anchor=".section1" data-zan="slidein-left-400px-.4s-.6s"></span>
+			<span data-anchor=".section1" data-zan="slidein-left-400px-.4s-.9s"></span>
+		</section>
+		<span data-zan="slide-right-1400px-3s slide-left-200px-1s-3s"></span>
+		<section class="section2">
+			<span data-anchor=".section2" data-offset="20" data-zan="slidein-left-400px-.4s"></span>
+			<span data-anchor=".section2" data-offset="20" data-zan="slidein-left-400px-.4s-.1s"></span>
+			<span data-anchor=".section2" data-offset="20" data-zan="slidein-left-400px-.4s-.2s"></span>
+			<span data-anchor=".section2" data-offset="20" data-zan="slidein-left-400px-.4s-.3s"></span>
+		</section>
+		<section class="section3">
+			<span data-anchor=".section3" data-offset="10" data-zan="slidein-left-400px-.4s"></span>
+			<span data-anchor=".section3" data-offset="10" data-zan="slidein-left-400px-.4s-.1s"></span>
+			<span data-anchor=".section3" data-offset="10" data-zan="slidein-left-400px-.4s-.2s"></span>
+			<span data-anchor=".section3" data-offset="10" data-zan="slidein-left-400px-.4s-.3s slide-up-100px-.4s-.7s"></span>
+		</section>
+	</body>
+</html>
